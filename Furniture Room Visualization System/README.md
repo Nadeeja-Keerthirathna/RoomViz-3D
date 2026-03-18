@@ -73,4 +73,4 @@ Once both servers are running, open your browser and navigate to the local URL p
 
 - `/Backend`: Express API server and SQLite database management.
 - `/roomviz`: The primary React + Three.js application.
-- `/Frontend`: A legacy static HTML version of the interface (for reference).
+

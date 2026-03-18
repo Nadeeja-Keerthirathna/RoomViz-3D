@@ -1,0 +1,337 @@
+.page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    color: var(--text-main);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(10, 15, 12, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.logoIcon {
+    color: var(--accent);
+    font-size: 22px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.nav span {
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.nav span:hover {
+    color: var(--text-main);
+}
+
+.saveBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 120px;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.progressCard {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin: 32px 0;
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.step {
+    color: var(--accent);
+}
+
+.progressBar {
+    height: 7px;
+    background: var(--bg-hover);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: width 0.5s;
+    box-shadow: var(--glow);
+}
+
+.sectionHead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.sectionHead h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.mt {
+    margin-top: 48px;
+}
+
+.dimGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-left: 42px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.field input {
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.field input:focus {
+    border-color: var(--accent);
+    background: rgba(0, 229, 87, 0.05);
+    outline: none;
+}
+
+.field input::placeholder {
+    color: var(--text-muted);
+}
+
+.shapeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-left: 42px;
+}
+
+.shapeCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shapeCard:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.shapeCard.selected {
+    border-color: var(--accent);
+    background: rgba(0, 229, 87, 0.04);
+    box-shadow:
+        inset 0 0 0 1px var(--accent),
+        0 10px 30px rgba(0, 229, 87, 0.1);
+}
+
+.shapeIcon {
+    font-size: 36px;
+}
+
+.shapeCard span {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.matGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-left: 42px;
+}
+
+.matCard {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.matCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.matCard.selected {
+    border-color: var(--accent);
+    box-shadow:
+        0 0 0 1px var(--accent),
+        0 10px 30px rgba(0, 229, 87, 0.1);
+}
+
+.matPreview {
+    height: 110px;
+    width: 100%;
+}
+
+.matLabel {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.radio {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--text-muted);
+    position: relative;
+}
+
+.matCard.selected .radio {
+    border-color: var(--accent);
+}
+
+.matCard.selected .radio::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.footer {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+}
+
+.continueBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 40px;
+    background: var(--accent);
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 229, 87, 0.35);
+    transition: all 0.2s;
+}
+
+.continueBtn:hover {
+    background: #00c74b;
+    transform: translateY(-2px);
+}
